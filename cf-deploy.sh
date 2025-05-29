@@ -1,9 +1,9 @@
 #!/bin/sh
 
 cf create-service app-autoscaler standard hello-autoscaler
-cf app-autoscaler config hello-autoscaler autoscaler.yml
 
 cf push dlb-hello
+cf configure-autoscaling dlb-hello autoscaler.yml
 cf enable-autoscaling dlb-hello
 
 cf start dlb-hello
