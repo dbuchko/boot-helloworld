@@ -1,0 +1,13 @@
+---
+instance_limits:
+  min: 1
+  max: 5
+scaling_factors:
+  up: 2
+  down: 1
+cooldown_period: 1m
+rules:
+- rule_type: cpu_entitlement
+  threshold:
+    min: 10
+    max: 20
